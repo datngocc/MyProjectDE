@@ -1,9 +1,6 @@
 import pandas as pd
 
-# Tạo dải ngày
 dates = pd.date_range(start='2011-01-01', end='2012-12-31')
-
-# Chuyển sang dataframe
 df = pd.DataFrame({"FULL_DATE": dates})
 df["DATE_KEY"] = df["FULL_DATE"].dt.strftime('%Y%m%d').astype(int)
 df["YEAR"] = df["FULL_DATE"].dt.year
@@ -14,5 +11,4 @@ df["IS_WEEKEND"] = df["WEEKDAY"] >= 6
 cols = ["DATE_KEY", "FULL_DATE", "YEAR", "MONTH", "DAY", "WEEKDAY", "IS_WEEKEND"]
 df = df[cols]
 
-# Xuất file CSV
 df.to_csv("MyProjectDE/data_output/dim_date.csv", index=False)

@@ -1,15 +1,12 @@
 import pandas as pd
 
-# Load original day.csv
+#Load data csv
 df_day = pd.read_csv("MyProjectDE/data/bike sharing/day.csv")
 
-# Parse datetime
 df_day["datetime"] = pd.to_datetime(df_day["dteday"])
 
-# Tạo các khóa
 df_day["date_key"] = df_day["datetime"].dt.strftime("%Y%m%d").astype(int)
 
-# Chọn các cột giống với hour
 columns_day = [
     "date_key", "season", "weathersit", "holiday", "workingday",
     "temp", "atemp", "hum", "windspeed", "casual", "registered", "cnt"
