@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Đọc dữ liệu gốc
-df = pd.read_csv("Data/bike sharing/hour.csv")
+df = pd.read_csv("MyProjectDE/data/bike sharing/hour.csv")
 
 # Tạo datetime thực tế
 df['datetime'] = pd.to_datetime(df['dteday']) + pd.to_timedelta(df['hr'], unit='h')
@@ -33,4 +33,4 @@ df_clean = df_clean.rename(columns={
 })
 
 # Xuất ra file mới
-df_clean.to_csv("hour_clean.csv", index=False)
+df_clean.to_csv("MyProjectDE/data_output/hour_clean.csv", index=False)

@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load original day.csv
-df_day = pd.read_csv("Data/bike sharing/day.csv")
+df_day = pd.read_csv("MyProjectDE/data/bike sharing/day.csv")
 
 # Parse datetime
 df_day["datetime"] = pd.to_datetime(df_day["dteday"])
@@ -31,4 +31,4 @@ df_clean_day = df_clean_day.rename(columns={
 })
 
 # Export
-df_clean_day.to_csv("day_clean.csv", index=False)
+df_clean_day.to_csv("MyProjectDEdata_output/day_clean.csv", index=False)
