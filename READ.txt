@@ -1,0 +1,6 @@
+/data/               # Raw & cleaned CSVs
+/etl/                # Python scripts for cleaning/loading
+/sql/                # SQL scripts for Snowflake schema & views
+/dashboard/          # Power BI .pbix or screenshots
+/doc/                # ERD, pipeline diagrams
+README.md            # Full project description
